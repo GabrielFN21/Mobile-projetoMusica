@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
 
     header: {
         flexDirection: 'row', 
-        backgroundColor: '#6c5ce7',
+        backgroundColor: '#3498db',
         alignItems: "center",
         justifyContent: "space-between"
     },
@@ -32,14 +32,17 @@ const styles = StyleSheet.create({
     }, 
 
     firstSection: {
+        flex: 1,
         marginTop: 50
     },
 
     mondaySection: {
+        flex: 2,
         marginTop: 50
     },
 
     thirdSection: {
+        flex: 1,
         marginTop: 50,
         marginBottom: 50
     }, 

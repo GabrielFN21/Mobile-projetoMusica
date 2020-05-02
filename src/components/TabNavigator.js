@@ -19,7 +19,7 @@ export default function TabNavigator() {
                 style: {
                     padding: 10,
                     height: 60,
-                    backgroundColor: '#6c5ce7',
+                    backgroundColor: '#3498db',
                 }
             }}       
         >

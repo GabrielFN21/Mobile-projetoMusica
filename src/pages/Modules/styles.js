@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
 
     header: {
         flexDirection: 'row', 
-        backgroundColor: '#6c5ce7',
+        backgroundColor: '#3498db',
         alignItems: "center",
         justifyContent: "space-between"
     },
@@ -21,31 +21,31 @@ const styles = StyleSheet.create({
     }, 
 
     content:{
-        width: 250,
-        borderWidth: 2,
-        flexDirection: "row",
-        flexWrap: "wrap"
+        flex: 1,
+        paddingHorizontal: 20,
     },
 
     box: {
-        flex: 1,
-        minWidth: 100,
-        minHeight: 100   
+        marginTop: 40,
+        borderWidth: 1,
+        borderRadius: 8,
+        padding: 10,
+        backgroundColor: '#ecf0f1'
     },
 
     module: {
-        //borderWidth: 1,
         borderRadius: 5,
-        padding: 10,
     },
 
     title: {
+        textAlign: "center",
         fontWeight: "bold"
     },
 
     description: {
+        textAlign: "center",
         marginTop: 10,
-        color: 'gray'
+    
     }
 });
 

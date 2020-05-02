@@ -13,7 +13,7 @@ export default function MakeFriends({ navigation }) {
     return(
         <View style={styles.container}>
             <Header  
-                androidStatusBarColor='#6c5ce7' 
+                androidStatusBarColor='#3498db' 
                 style={styles.header}
             >
                 <TouchableOpacity> 

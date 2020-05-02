@@ -4,12 +4,8 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: "column",
         height: 170, 
-        backgroundColor: '#6c5ce7',
+        backgroundColor: '#3498db',
         alignItems: "center"
-    },
-
-    content: {
-        //width: '100%',
     },
 
     h2: {

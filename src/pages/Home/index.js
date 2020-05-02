@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import { Header, H1, H2 } from 'native-base';
 
 import { DrawerActions } from '@react-navigation/native';
@@ -13,7 +13,7 @@ export default function Home({ navigation }) {
     return(
         <View style={styles.container}>
             <Header  
-                androidStatusBarColor='#6c5ce7' 
+                androidStatusBarColor='#3498db' 
                 style={styles.header}
             >
                 <H1 style={styles.h1}>Home</H1>
@@ -27,9 +27,14 @@ export default function Home({ navigation }) {
             </Header>
             <View style={styles.content}>
                 <ScrollView style={styles.list}>
-                    <Image />
                     <View style={styles.firstSection}>
-                        <H2 style={styles.h2}>Aprenda música</H2> 
+                        <View>
+                            <H2 style={styles.h2}>Aprenda música</H2>
+                            <Icon 
+                                name="music"
+                                type="font-awesome"
+                            />
+                        </View>
                         <Text style={styles.message}>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Rem numquam aliquid repudiandae perferendis suscipit sed? 
@@ -38,7 +43,14 @@ export default function Home({ navigation }) {
                         </Text>
                     </View>
                     <View style={styles.mondaySection}>
-                        <H2 style={styles.h2}>Suba no Rank</H2> 
+                        <View>
+                            <H2 style={styles.h2}>Suba no Rank</H2>
+                            <Icon 
+                                name="star"
+                                type="font-awesome"
+                                color="#f1c40f"
+                            />
+                        </View> 
                         <Text style={styles.message}>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Rem numquam aliquid repudiandae perferendis suscipit sed? 
@@ -47,7 +59,14 @@ export default function Home({ navigation }) {
                         </Text>
                     </View>
                     <View style={styles.thirdSection}>
-                        <H2 style={styles.h2}>Faça amizades</H2> 
+                        <View>
+                            <H2 style={styles.h2}>Faça amizades</H2> 
+                            <Icon 
+                                name="users"
+                                type="font-awesome"
+                                color="#3498db"
+                            />
+                        </View>
                         <Text style={styles.message}>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Rem numquam aliquid repudiandae perferendis suscipit sed? 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, SafeAreaView, FlatList } from 'react-native';
 import { Header, H1 } from 'native-base';
 
 import { DrawerActions } from '@react-navigation/native';
@@ -10,10 +10,21 @@ import { Icon } from 'react-native-elements';
 import styles from './styles';
 
 export default function Friends({ navigation }) {
+    const data = [
+        { id: '0', name: 'Rodolfo', points: 200 },
+        { id: '1', name: 'Emerson', points: 150 },
+        { id: '2', name: 'Morty', points: 23 },
+        { id: '3', name: 'Thiaguinho', points: 23 },
+        { id: '4', name: 'João', points: 23 },
+        { id: '5', name: 'Pedro', points: 23 },
+        { id: '6', name: 'Rick', points: 50 },
+        { id: '7', name: 'Vinicius', points: 23 },
+    ]
+
     return(
         <View style={styles.container}>
             <Header  
-                androidStatusBarColor='#6c5ce7' 
+                androidStatusBarColor='#3498db' 
                 style={styles.header}
             >
                 <H1 style={styles.h1}>Friends</H1>
@@ -26,118 +37,29 @@ export default function Friends({ navigation }) {
                 />
             </Header>
             <View style={styles.content}>
-                <ScrollView
-                    style={styles.scroll} 
-                    showsVerticalScrollIndicator={false}>
-                    <View style={styles.friend}>
-                        <Icon 
-                            raised
-                            name="user"
-                            type="font-awesome"
-                        />
-                        <View style={styles.friendProperty}>
-                            <Text style={styles.name}>Rodolfo</Text>
-                            <Text style={styles.points}>23 pontos</Text>
-                        </View>
-                        <Text style={styles.rank}>#1</Text>
-                    </View> 
-                    <View style={styles.friend}>
-                        <Icon 
-                            raised
-                            name="user"
-                            type="font-awesome"
-                        />
-                        <View style={styles.friendProperty}>
-                            <Text style={styles.name}>Rodolfo</Text>
-                            <Text style={styles.points}>23 pontos</Text>
-                        </View>
-                        <Text style={styles.rank}>#1</Text>
-                    </View>
-                    <View style={styles.friend}>
-                        <Icon 
-                            raised
-                            name="user"
-                            type="font-awesome"
-                        />
-                        <View style={styles.friendProperty}>
-                            <Text style={styles.name}>Rodolfo</Text>
-                            <Text style={styles.points}>23 pontos</Text>
-                        </View>
-                        <Text style={styles.rank}>#1</Text>
-                    </View>
-                    <View style={styles.friend}>
-                        <Icon 
-                            raised
-                            name="user"
-                            type="font-awesome"
-                        />
-                        <View style={styles.friendProperty}>
-                            <Text style={styles.name}>Rodolfo</Text>
-                            <Text style={styles.points}>23 pontos</Text>
-                        </View>
-                        <Text style={styles.rank}>#1</Text>
-                    </View>
-                    <View style={styles.friend}>
-                        <Icon 
-                            raised
-                            name="user"
-                            type="font-awesome"
-                        />
-                        <View style={styles.friendProperty}>
-                            <Text style={styles.name}>Rodolfo</Text>
-                            <Text style={styles.points}>23 pontos</Text>
-                        </View>
-                        <Text style={styles.rank}>#1</Text>
-                    </View>
-                    <View style={styles.friend}>
-                        <Icon 
-                            raised
-                            name="user"
-                            type="font-awesome"
-                        />
-                        <View style={styles.friendProperty}>
-                            <Text style={styles.name}>Rodolfo</Text>
-                            <Text style={styles.points}>23 pontos</Text>
-                        </View>
-                        <Text style={styles.rank}>#1</Text>
-                    </View>
-                    <View style={styles.friend}>
-                        <Icon 
-                            raised
-                            name="user"
-                            type="font-awesome"
-                        />
-                        <View style={styles.friendProperty}>
-                            <Text style={styles.name}>Rodolfo</Text>
-                            <Text style={styles.points}>23 pontos</Text>
-                        </View>
-                        <Text style={styles.rank}>#1</Text>
-                    </View>
-                    <View style={styles.friend}>
-                        <Icon 
-                            raised
-                            name="user"
-                            type="font-awesome"
-                        />
-                        <View style={styles.friendProperty}>
-                            <Text style={styles.name}>Rodolfo</Text>
-                            <Text style={styles.points}>23 pontos</Text>
-                        </View>
-                        <Text style={styles.rank}>#1</Text>
-                    </View>
-                    <View style={styles.friend}>
-                        <Icon 
-                            raised
-                            name="user"
-                            type="font-awesome"
-                        />
-                        <View style={styles.friendProperty}>
-                            <Text style={styles.name}>Rodolfo</Text>
-                            <Text style={styles.points}>23 pontos</Text>
-                        </View>
-                        <Text style={styles.rank}>#1</Text>
-                    </View>
-                </ScrollView>
+                <SafeAreaView>
+                    <FlatList 
+                        data={data}
+                        showsVerticalScrollIndicator={false}
+                        keyExtractor={item => item.id}
+                        renderItem={({ item }) => {
+                            return(
+                                <View style={styles.friend}>
+                                    <Icon 
+                                        raised
+                                        name="user"
+                                        type="font-awesome"
+                                    />
+                                    <View style={styles.friendProperty}>
+                                        <Text style={styles.name}>{item.name}</Text>
+                                        <Text style={styles.points}>{item.points} pontos</Text>
+                                    </View>
+                                    <Text style={styles.rank}>#1</Text>
+                                </View> 
+                            );
+                        }}
+                    />
+                </SafeAreaView>
             </View> 
         </View>
     );

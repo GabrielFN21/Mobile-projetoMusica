@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { NavigationEvents } from 'react-navigation';
 
 const styles = StyleSheet.create({
     container: {
@@ -9,7 +8,7 @@ const styles = StyleSheet.create({
 
     header: {
         flexDirection: 'row', 
-        backgroundColor: '#6c5ce7',
+        backgroundColor: '#3498db',
         alignItems: "center",
         justifyContent: "space-between"
     },
@@ -24,11 +23,6 @@ const styles = StyleSheet.create({
     content:{
         flex: 1,
         justifyContent: "center",
-        alignItems: "center"
-    },
-
-    scroll: {
-        width: '100%'
     },
 
     friend: {

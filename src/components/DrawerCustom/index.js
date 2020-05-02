@@ -15,7 +15,7 @@ export default function DrawerCustom(props) {
 
     return(
         <>
-            <Header androidStatusBarColor='#6c5ce7' style={styles.header}>
+            <Header androidStatusBarColor='#3498db' style={styles.header}>
                 <Avatar
                     rounded
                     source={{
@@ -27,17 +27,13 @@ export default function DrawerCustom(props) {
                 />
                 <H2 style={styles.h2}>Gabriel</H2>
             </Header>
-            <Content style={styles.content}>
+            <Content>
                 <ScrollView 
-                    style={styles.scroll}
                     showsVerticalScrollIndicator={false}
                 >
-                    <DrawerItemList {...props} 
-                        labelStyle={{ fontWeight: "bold" }} 
-                    />
+                    <DrawerItemList {...props} />
                     <DrawerItem 
                         label="Logout"
-                        labelStyle={{ fontWeight: "bold" }}
                         icon={() => (
                             <Icon 
                                 name="eject"

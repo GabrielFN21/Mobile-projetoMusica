@@ -2,12 +2,13 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: '#fff'
     },
 
     header: {
         flexDirection: 'row', 
-        backgroundColor: '#6c5ce7',
+        backgroundColor: '#3498db',
         alignItems: "center",
         justifyContent: "space-between"
     },
@@ -23,6 +24,20 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center"
+    },
+
+    box: {
+        width: 250,
+        borderWidth: 1,
+        borderRadius: 8,
+        padding: 10,
+        marginTop: 40,
+        alignItems: "center",
+        backgroundColor: '#ecf0f1'
+    },
+
+    points: {
+        fontWeight: "bold"
     }
 });
 

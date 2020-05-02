@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
 
     header: {
         flexDirection: 'row', 
-        backgroundColor: '#6c5ce7',
+        backgroundColor: '#3498db',
         alignItems: "center",
         justifyContent: "space-between"
     },

@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Main from './pages/Main';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Exercise from './pages/Exercise';
 
 import Drawer from './components/DrawerNavigation';
 
@@ -33,6 +34,10 @@ export default function Routes() {
                 <Stack.Screen 
                     name="Home"
                     component={Drawer}
+                />
+                <Stack.Screen 
+                    name="Exercise"
+                    component={Exercise}
                 />
             </Stack.Navigator>
         </NavigationContainer>

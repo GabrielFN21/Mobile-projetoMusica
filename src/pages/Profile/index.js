@@ -13,7 +13,7 @@ export default function Profile({ navigation }) {
     return(
         <View style={styles.container}>
             <Header  
-                androidStatusBarColor='#6c5ce7' 
+                androidStatusBarColor='#3498db' 
                 style={styles.header}
             >
                 <H1 style={styles.h1}>Profile</H1>
